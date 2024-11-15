@@ -1,0 +1,43 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Hackathon Projeto</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header>
+        <h1>Contato</h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/about/about.html">Sobre</a></li>
+                <li><a href="/pages/tips/tips.html">Dicas</a></li>
+                <li><a href="/pages/contact/contact.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contact-content">
+        <h2>Entre em contato conosco</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br>
+
+            <button type="submit">submit</button>
+        </form>
+        <div id="contact-response"></div>
+    </section>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

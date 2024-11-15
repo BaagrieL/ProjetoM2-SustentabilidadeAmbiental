@@ -1,0 +1,117 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FAF3E0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilo do Cabeçalho */
+header {
+    background-color: #8fa1f0;
+    color: #3C3C3C;
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 3px solid #73a3da;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Navegação */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+nav a {
+    color: #3C3C3C;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #FF8A65;
+    color: #FAF3E0;
+}
+
+/* Seções */
+section {
+    padding: 2rem;
+    background-color: #FFFFFF;
+    margin: 1.5rem 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Títulos das Seções */
+section h2 {
+    color: #FF8A65;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Botões */
+button {
+    padding: 12px 24px;
+    background-color: #FFB74D;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #FF8A65;
+    transform: scale(1.05);
+}
+
+/* Ocultar elementos gráficos */
+.graph {
+    display: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 1.75rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    button {
+        width: 100%;
+    }
+}
