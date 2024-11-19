@@ -6,26 +6,39 @@
 }
 
 :root {
+    /* Variáveis para o tema claro */
     --color1: cornflowerblue;
     --color2: #75dde0;
     --color3: #333;
     --color4: #523423;
+    --background: #FAF3E0;
+    --text-color: #333;
+}
+
+:root[data-theme="dark"] {
+    /* Variáveis para o tema escuro */
+    --color1: #1e90ff;
+    --color2: #4aa3a5;
+    --color3: #FAF3E0;
+    --color4: #c1a87d;
+    --background: #1a1a1a;
+    --text-color: #FAF3E0;
 }
 
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #FAF3E0;
-    color: var(--color3);
+    background-color: var(--background);
+    color: var(--text-color);
     line-height: 1.6;
 }
 
 /* Estilo do Cabeçalho */
 header {
-    background-color: #b2c0ff;
-    color: var(--color3);
+    background-color: var(--color1);
+    color: var(--text-color);
     padding: 1.5rem;
     text-align: center;
-    border-bottom: 3px solid #73a3da;
+    border-bottom: 3px solid var(--color2);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -46,7 +59,7 @@ nav ul {
 }
 
 nav a {
-    color: var(--color3);
+    color: var(--text-color);
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
@@ -57,13 +70,13 @@ nav a {
 
 nav a:hover {
     background-color: var(--color1);
-    color: #FAF3E0;
+    color: var(--background);
 }
 
 /* Seções */
 section {
     padding: 2rem;
-    background-color: #FFFFFF;
+    background-color: var(--background);
     margin: 1.5rem 0;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -94,7 +107,7 @@ button {
 }
 
 button:hover {
-    background-color: #096fe2;
+    background-color: var(--color1);
     transform: scale(1.05);
 }
 
