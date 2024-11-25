@@ -3,11 +3,11 @@ function showAlert(message) {
     alert(message);
 }
 
-// Função para alternar a exibição de um elemento usando classes
+// Função para alternar a visibilidade de um elemento com base em seu ID
 function toggleDisplay(elementId) {
     const element = document.getElementById(elementId);
     if (element) {
-        element.classList.toggle('hidden'); // Alterna uma classe 'hidden'
+        element.classList.toggle('hidden'); // Alterna a classe 'hidden'
     } else {
         console.warn(`Elemento com ID '${elementId}' não encontrado.`);
     }
@@ -23,44 +23,57 @@ function showResponse(responseId, message) {
     }
 }
 
-// Event Listeners
-document.getElementById('learn-more-btn')?.addEventListener('click', () => {
-    showAlert("Saiba mais sobre as ações que você pode tomar para ajudar o meio ambiente!");
-});
+// Função para lidar com a troca de tema (modo escuro)
+function toggleTheme(darkModeToggle) {
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    const newTheme = currentTheme === "light" ? "dark" : "light";
+    
+    // Alterna o tema e salva a preferência no localStorage
+    document.documentElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
 
-document.getElementById('show-graph-btn')?.addEventListener('click', () => {
-    toggleDisplay('graph');
-});
+    // Atualiza o texto do botão de acordo com o novo tema
+    darkModeToggle.textContent = newTheme === "dark" ? "Desativar Modo Escuro" : "Ativar Modo Escuro";
+}
 
-document.getElementById('tips-form')?.addEventListener('submit', (event) => {
-    event.preventDefault();
-    showResponse('tips-response', 'Obrigado por contribuir com ações sustentáveis!');
-});
-
-document.getElementById('contact-form')?.addEventListener('submit', (event) => {
-    event.preventDefault();
-    showResponse('contact-response', 'Obrigado pelo seu contato. Responderemos em breve!');
-});
-
-// Modo Escuro
-document.addEventListener("DOMContentLoaded", () => {
+// Função para inicializar o tema e configurar o botão
+function initializeTheme() {
     const darkModeToggle = document.getElementById("dark-mode-toggle");
-
-    // Verifica se há preferência salva
     const savedTheme = localStorage.getItem("theme") || "light";
+    
+    // Define o tema inicial e atualiza o botão
     document.documentElement.setAttribute("data-theme", savedTheme);
+    darkModeToggle.textContent = savedTheme === "dark" ? "Desativar Modo Escuro" : "Ativar Modo Escuro";
+    
+    // Adiciona o evento de clique para alternar o tema
+    darkModeToggle.addEventListener("click", () => toggleTheme(darkModeToggle));
+}
 
-    if (savedTheme === "dark") {
-        darkModeToggle.textContent = "Desativar Modo Escuro";
-    }
+// Event Listeners para interações na página
+document.addEventListener("DOMContentLoaded", () => {
+    // Inicializa o tema
+    initializeTheme();
 
-    darkModeToggle.addEventListener("click", () => {
-        const currentTheme = document.documentElement.getAttribute("data-theme");
-        const newTheme = currentTheme === "light" ? "dark" : "light";
+    // Configura o alerta para o botão 'Ler Mais'
+    document.getElementById('learn-more-btn')?.addEventListener('click', () => {
+        showAlert("Saiba mais sobre as ações que você pode tomar para ajudar o meio ambiente!");
+    });
 
-        document.documentElement.setAttribute("data-theme", newTheme);
-        localStorage.setItem("theme", newTheme);
+    // Configura o evento para mostrar/ocultar o gráfico
+    document.getElementById('show-graph-btn')?.addEventListener('click', () => {
+        toggleDisplay('graph');
+    });
 
-        darkModeToggle.textContent = newTheme === "dark" ? "Desativar Modo Escuro" : "Ativar Modo Escuro";
+    // Configura o envio do formulário de dicas
+    document.getElementById('tips-form')?.addEventListener('submit', (event) => {
+        event.preventDefault();
+        showResponse('tips-response', 'Obrigado por contribuir com ações sustentáveis!');
+    });
+
+    // Configura o envio do formulário de contato
+    document.getElementById('contact-form')?.addEventListener('submit', (event) => {
+        event.preventDefault();
+        showResponse('contact-response', 'Obrigado pelo seu contato. Responderemos em breve!');
     });
 });
+
