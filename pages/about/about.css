@@ -1,0 +1,43 @@
+:root {
+    /* Variáveis para o tema claro */
+    --color1: cornflowerblue;
+    --color2: #75dde0;
+    --color3: #333;
+    --color4: #523423;
+    --background: #FAF3E0;
+    --text-color: #333;
+}
+
+:root[data-theme="dark"] {
+    /* Variáveis para o tema escuro */
+    --color1: #1e90ff;
+    --color2: #4aa3a5;
+    --color3: #FAF3E0;
+    --color4: #c1a87d;
+    --background: #1a1a1a;
+    --text-color: #FAF3E0;
+}
+
+/* Botões */
+button {
+    padding: 12px 24px;
+    background-color: var(--color2);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: var(--color1);
+    transform: scale(1.05);
+}
+
+/* Ocultar elementos gráficos */
+.graph {
+    display: none;
+}
