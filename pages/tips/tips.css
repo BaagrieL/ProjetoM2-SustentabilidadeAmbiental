@@ -1,4 +1,22 @@
-@import url(../../css);
+:root {
+    /* Variáveis para o tema claro */
+    --color1: cornflowerblue;
+    --color2: #75dde0;
+    --color3: #333;
+    --color4: #523423;
+    --background: #FAF3E0;
+    --text-color: #333;
+}
+
+:root[data-theme="dark"] {
+    /* Variáveis para o tema escuro */
+    --color1: #1e90ff;
+    --color2: #4aa3a5;
+    --color3: #FAF3E0;
+    --color4: #c1a87d;
+    --background: #1a1a1a;
+    --text-color: #FAF3E0;
+}
 
 /* Botões */
 button {
