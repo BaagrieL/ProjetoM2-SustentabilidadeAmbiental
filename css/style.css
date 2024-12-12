@@ -138,6 +138,8 @@ button:hover {
 
 .texto {
     width: 750px;
-    font-size: 20px;
+    font-size: 18px;
     text-align: justify;
+    color: var(--color3);
+    
 }
