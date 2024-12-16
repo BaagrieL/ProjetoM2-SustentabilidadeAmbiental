@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Hackathon</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/global.css">
 </head>
 <body>
+    <!-- Navegação do site -->
     <header>
-        <img src="./image/icon earth.png" alt="Ícone da Terra">
         <nav>
+            <!-- Logo da página -->
+            <img src="./image/icon earth.png" alt="Ícone da Terra">
+            <!-- Páginas do menu de navegação -->
             <ul>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./pages/about/about.html">Sobre</a></li>
@@ -17,86 +20,79 @@
                 <li><a href="./pages/contact/contact.html">Contato</a></li>
             </ul>
         </nav>
+        <!-- Botão para mudar o tema da página -->
         <button id="dark-mode-toggle">Ativar Modo Escuro</button>
     </header>
 
     <main>
-        <section aria-labelledby="impacto-ambiental">
-            <h1 id="impacto-ambiental">Impacto Ambiental</h1>
+        <!-- Conteúdo principal -->
+        <section aria-labelledby="desmatamentoAmbiental">
+            <h1 class="impacto-ambiental">Atenção! Com aumento do desmatamento, mundo perde 6,4 milhões de hectares de florestas em 2023.</h1>
+            <article>
+                <img id="imgFirst" src="./image/desmatamento.jpg" alt="Desmatamento">
+                <h4>O mundo perdeu, em 2023, quase 6,4 milhões de hectares de florestas, de acordo com relatório do Climate Focus. Essa devastação foi marcada por um aumento na taxa de desmatamento, a despeito de inúmeros esforços para conter o problema em nível global.</h4>
+                <p>Fonte: <a href="https://umsoplaneta.globo.com/indicadores/desmatamento-no-brasil/noticia/2024/10/08/com-aumento-do-desmatamento-mundo-perde-64-milhoes-de-hectares-de-florestas-em-2023.ghtml" target="_blank">🔎</a></p>
+            </article>
+        </section>
+
+        <section aria-labelledby="impactoAmbiental">
+            <h1 class="impacto-ambiental">Impacto Ambiental</h1>
             <h4>Impactos ambientais são alterações no ambiente causadas pelo desenvolvimento das atividades no espaço geográfico, sejam naturais ou artificiais, causada por atividades humanas. Nesse sentido, eles podem ser positivos, quando resultam em melhorias para o ambiente, ou negativos, quando essas alterações causam algum risco para o ser humano ou para os recursos naturais encontrados no espaço, e afetam diversos elementos como o ar, a água, o solo, a flora, a fauna e os ecossistemas como um todo.</h4>
             <p>Fonte: <a href="https://brasilescola.uol.com.br/o-que-e/geografia/o-que-e-impacto-ambiental.htm" target="_blank">🔎</a></p>
             <h4>Aqui você pode aprender mais sobre como podemos ajudar o planeta!</h4>
-            <button id="learn-more-btn">Ler Mais</button>
         </section>
+        <!-- Causas do impacto ambiental -->
+        <section aria-labelledby="causasImpacto">
+            <h1 class="impacto-ambiental">Causas dos Impactos Ambientais</h2>
+            <article class="sliderInfo">
+                <div id="box-1">
+                    <h3>Industrialização <br>
+                    A produção em larga escala gera poluição do ar, da água e do solo, além de consumir grandes quantidades de recursos naturais.
+                    <img class="imgImpacto" src="image/industrial.png" alt="Industrialização"> </h3>
+                </div>
 
-        <section id="impactoAmbientalCausas">
-            <h2>Causas dos Impactos Ambientais</h2>
-            <p class="texto">As principais causas dos impactos ambientais são:</p> <br>
-            <article>
-                <p class="texto">
-                    <strong>Industrialização:</strong> A produção em larga escala gera poluição do ar, da água e do solo, além de consumir grandes quantidades de recursos naturais. <br>
-                    <img src="image/industrializacao.png" alt="Industrialização" height="300px" width="300px">
-                </p><br>
+                <div id="box-2">
+                    <h3>Agricultura <br>
+                    O uso de agrotóxicos, a derrubada de florestas para a criação de pastagens e o cultivo, e a erosão do solo são alguns dos impactos causados pela atividade agrícola.
+                    <img class="imgImpacto" src="image/campo.png" alt="Agricultura">  </h3>
+                </div>
 
-                <p class="texto">
-                    <strong>Agricultura:</strong>O uso de agrotóxicos, a derrubada de florestas para a criação de pastagens e o cultivo, e a erosão do solo são alguns dos impactos causados pela atividade agrícola. <br>
-                    <img src="image/agricultura.png" alt="agricultura" height="300px" width="300px">
-                    
-                </p><br>
+                <div id="box-3">
+                    <h3>Urbanização <br>
+                    O crescimento desordenado das cidades gera problemas como o aumento da produção de lixo, a poluição da água e do ar, e a ocupação de áreas verdes.
+                    <img src="image/urban.png" alt="Urbanização"> </h3>
+                </div>
 
-                <p class="texto">
-                    <strong>Urbanização:</strong> O crescimento desordenado das cidades gera problemas como o aumento da produção de lixo, a poluição da água e do ar, e a ocupação de áreas verdes. <br>
-                    <img src="image/urbanizacao.png" alt="Urbanização" height="300px" width="300px">
-                </p><br>
+                <div id="box-4">
+                <h3>Consumo excessivo <br>
+                    O estilo de vida consumista gera grande quantidade de resíduos e demanda por recursos naturais, o que pressiona os ecossistemas.
+                    <img class="imgImpacto" src="image/nature.png" alt="Consumo excessivo">  </h3>
+            </article>
+        </section>
+        <!-- Tipos de impactos ambientais -->
+        <section aria-labelledby="Tipos de Impactos">
+            <h1>Tipos de Impactos Ambientais</h1>
+            <h4>Os impactos ambientais podem ser classificados de diversas formas, mas algumas das principais são:</h4>
 
-                <p class="texto">
-                    <strong>Exploração de recursos naturais:</strong> O desmatamento, a extração de minérios, petróleo e gás natural causa danos ao meio ambiente, como a contaminação de solos e águas, e a destruição de habitats. <br>
-                    <img src="image/desmatamento2.png" alt="Exploração de recursos naturais" height="300px" width="300px">
-                </p><br>
-
-                <p class="texto">
-                    <strong>Consumo excessivo:</strong> O estilo de vida consumista gera grande quantidade de resíduos e demanda por recursos naturais, o que pressiona os ecossistemas. <br>
-                    <img src="image/consumoExcessivo.png" alt="Consumo excessivo" height="300px" width="300px">
-                </p>
-            </article><br>
-
-            <h2>Tipos de Impactos Ambientais</h2>
-            <p class="texto">Os impactos ambientais podem ser classificados de diversas formas, mas algumas das principais são:</p>
-
-            <article>
-                <p class="texto">
+            <article id="causasImpacto">
+                <ul>
                     <strong>Diretos:</strong> Afetam diretamente um componente ambiental específico, como a poluição de um rio por um efluente industrial. <br>
                     <strong>Indiretos:</strong> Afetam um componente ambiental de forma indireta, como a redução da biodiversidade causada pela fragmentação de um habitat. <br>
                     <strong>Positivos:</strong> Contribuem para a melhoria do meio ambiente, como a recuperação de áreas degradadas. <br>
                     <strong>Negativos:</strong> Degradam o meio ambiente, como a poluição do ar e da água. <br>
                     <strong>Reversíveis:</strong> Podem ser corrigidos ou mitigados, como a recuperação de uma área degradada. <br>
                     <strong>Irreversíveis:</strong> Causam danos permanentes ao meio ambiente, como a extinção de espécies.
-                </p>
-            </article>
-
-        </section>
-
-        <section aria-labelledby="desmatamento">
-            <h1 id="desmatamento">Atenção! Com aumento do desmatamento, mundo perde 6,4 milhões de hectares de florestas em 2023.</h1>
-            <article>
-                <img src="./image/desmatamento.jpg" alt="Desmatamento">
-                <h4>O mundo perdeu, em 2023, quase 6,4 milhões de hectares de florestas, de acordo com relatório do Climate Focus. Essa devastação foi marcada por um aumento na taxa de desmatamento, a despeito de inúmeros esforços para conter o problema em nível global.</h4>
-                <p>Fonte: <a href="https://umsoplaneta.globo.com/indicadores/desmatamento-no-brasil/noticia/2024/10/08/com-aumento-do-desmatamento-mundo-perde-64-milhoes-de-hectares-de-florestas-em-2023.ghtml" target="_blank">🔎</a></p>
+                </ul>
             </article>
         </section>
-
-        <section aria-labelledby="noticias">
-            <article>
-                
-            </article>
-        </section>
-
     </main>
 
     <footer>
+        <!-- Direitos autorais -->
         <p>&copy; 2024 Projeto Hackathon. Todos os direitos reservados.</p>
     </footer>
-
+    
     <script src="./js/script.js"></script>
 </body>
+
 </html>

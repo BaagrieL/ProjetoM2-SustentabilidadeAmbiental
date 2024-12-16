@@ -53,17 +53,7 @@ function initializeTheme() {
 document.addEventListener("DOMContentLoaded", () => {
     // Inicializa o tema
     initializeTheme();
-
-    // Configura o alerta para o botão 'Ler Mais'
-    document.getElementById('learn-more-btn')?.addEventListener('click', () => {
-        showAlert("Nos contate, e saiba mais sobre as ações que você pode tomar para ajudar o meio ambiente!");
-    });
-
-    // Configura o evento para mostrar/ocultar o gráfico
-    document.getElementById('show-graph-btn')?.addEventListener('click', () => {
-        toggleDisplay('graph');
-    });
-
+    
     // Configura o envio do formulário de dicas
     document.getElementById('tips-form')?.addEventListener('submit', (event) => {
         event.preventDefault();

@@ -6,14 +6,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dicas | Hackathon Projeto</title>
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/global.css">
     <link rel="stylesheet" href="./tips.css">
 </head>
 
 <body>
+    <!-- Navegação do site -->
     <header>
-        <img src="../../image/icon earth.png" alt="Ícone da Terra">
         <nav>
+            <!-- Logo da página -->
+            <img src="../../image/icon earth.png" alt="Ícone da Terra">
+            <!-- Páginas do menu de navegação -->
             <ul>
                 <li><a href="../../index.html">Home</a></li>
                 <li><a href="../about/about.html">Sobre</a></li>
@@ -21,16 +24,19 @@
                 <li><a href="../contact/contact.html">Contato</a></li>
             </ul>
         </nav>
+        <!-- Botão para mudar o tema da página -->
         <button id="dark-mode-toggle">Ativar Modo Escuro</button>
     </header>
 
     <main>
+        <!-- Calculadora para medir o gasto de CO² -->
         <section id="calculator-container">
             <div id="initial">
                 <h2>Você sabe quantas toneladas de <span class="co2-span">CO<sup>2</sup></span class="co2-span"> vocé emite por ano?</h2>
                 <button id="calculate-carbon-footprint-btn">Calcular</button>
             </div>
         </section>
+        <!-- Checkbox de dicas para ajudar o planeta -->
         <section id="tips-content">
             <h2>Como podemos ajudar o planeta?</h2>
             <form id="tips-form">
@@ -51,6 +57,7 @@
             <div id="tips-response"></div>
         </section>
     </main>
+    <!-- Calculadora de CO² -->
     <template id="template">
         <div id="calculator">
             <div class="calculator-screen">
@@ -69,7 +76,7 @@
     <template id="calculator-result-template">
         <div id="calculator-result">
             <h2>Resultado</h2>
-            <div class="suggestions" />
+            <div class="suggestions">
         </div>
     </template>
 
@@ -78,6 +85,11 @@
             <h2>Emissão de carbono por categoria</h2>
         </div>
     </template>
+    
+    <footer>
+        <!-- Direitos autorais -->
+        <p>&copy; 2024 Projeto Hackathon. Todos os direitos reservados.</p>
+    </footer>
 
     <script src="../../js/script.js"></script>
     <script type="module" src="./calculadoraCarbonoView.js"></script>
