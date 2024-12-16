@@ -1,9 +1,14 @@
+@import url('../../css/calculator.css');
+
 :root {
     /* Variáveis para o tema claro */
     --color1: cornflowerblue;
     --color2: #75dde0;
     --color3: #333;
     --color4: #523423;
+    --accent-color:#f76539;
+    --ballon-bg-color: #a3c994;
+    --accent-color2: #3aa309;
     --background: #FAF3E0;
     --text-color: #333;
 }
@@ -16,6 +21,10 @@
     --color4: #c1a87d;
     --background: #1a1a1a;
     --text-color: #FAF3E0;
+}
+
+p {
+    color: var(--text-color);
 }
 
 /* Botões */

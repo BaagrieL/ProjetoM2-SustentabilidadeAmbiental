@@ -1,6 +1,7 @@
 <!-- tips.html -->
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="./tips.css">
 </head>
+
 <body>
     <header>
         <img src="../../image/icon earth.png" alt="Ícone da Terra">
@@ -22,26 +24,63 @@
         <button id="dark-mode-toggle">Ativar Modo Escuro</button>
     </header>
 
-    <section id="tips-content">
-        <h2>Como podemos ajudar o planeta?</h2>
-        <form id="tips-form">
-            <label>
-                <input type="checkbox" id="recycling"> Reciclar plásticos, metais e papel
-            </label><br>
-            <label>
-                <input type="checkbox" id="saving-water"> Economizar água ao tomar banho
-            </label><br>
-            <label>
-                <input type="checkbox" id="using-bikes"> Usar mais bicicletas no lugar de carros
-            </label><br>
-            <label>
-                <input type="checkbox" id="reducing-waste"> Reduzir o desperdício de alimentos
-            </label><br>
-            <button type="submit">Enviar Ações</button>
-        </form>
-        <div id="tips-response"></div>
-    </section>
+    <main>
+        <section id="calculator-container">
+            <div id="initial">
+                <h2>Você sabe quantas toneladas de <span class="co2-span">CO<sup>2</sup></span class="co2-span"> vocé emite por ano?</h2>
+                <button id="calculate-carbon-footprint-btn">Calcular</button>
+            </div>
+        </section>
+        <section id="tips-content">
+            <h2>Como podemos ajudar o planeta?</h2>
+            <form id="tips-form">
+                <label>
+                    <input type="checkbox" id="recycling"> Reciclar plásticos, metais e papel
+                </label><br>
+                <label>
+                    <input type="checkbox" id="saving-water"> Economizar água ao tomar banho
+                </label><br>
+                <label>
+                    <input type="checkbox" id="using-bikes"> Usar mais bicicletas no lugar de carros
+                </label><br>
+                <label>
+                    <input type="checkbox" id="reducing-waste"> Reduzir o desperdício de alimentos
+                </label><br>
+                <button type="submit">Enviar Ações</button>
+            </form>
+            <div id="tips-response"></div>
+        </section>
+    </main>
+    <template id="template">
+        <div id="calculator">
+            <div class="calculator-screen">
+                <p id="question-text"></p>
+            </div>
+            <div id="calculator-body">
+                <div id="balloon" class="balloon hidden">
+                    <p id="balloon-main-text">Teclas são bem vindas!</p>
+                    <p id="balloon-secondary-text">use <span>Enter</span> para prosseguir</p>
+                    <div class="balloon-arrow"></div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="calculator-result-template">
+        <div id="calculator-result">
+            <h2>Resultado</h2>
+            <div class="suggestions" />
+        </div>
+    </template>
+
+    <template id="calculator-detail-template">
+        <div id="calculator-details">
+            <h2>Emissão de carbono por categoria</h2>
+        </div>
+    </template>
 
     <script src="../../js/script.js"></script>
+    <script type="module" src="./calculadoraCarbonoView.js"></script>
 </body>
+
 </html>
