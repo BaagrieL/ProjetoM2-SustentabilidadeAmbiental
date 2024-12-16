@@ -41,3 +41,34 @@ button:hover {
 .graph {
     display: none;
 }
+
+/* conteiners do time*/
+.team-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+/* Para 3 colunas */
+.team-member {
+    flex: 1 1 30%; 
+    text-align: center;
+    margin: 0.5rem;
+}
+
+.team-member a {
+    color: var(--color1);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.team-member a:hover {
+    color: var(--color2);
+}
+
+/* Para 2 colunas */
+.team-container:last-of-type .team-member {
+    flex: 1 1 45%; 
+}
