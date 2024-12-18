@@ -20,7 +20,7 @@ O **Projeto Sustentabilidade Ambiental** visa sensibilizar os usuários sobre a 
 
 ## 🧰 Funcionalidades
 ### Calculadora de pegada de Carbono
-<img width="100px" href="./image/sustentabilidade-gif.mp4"/>
+<img width="500px" src="./image/sustentabilidade-ambiental-screen-gif.gif">
 
 ### Modo Escuro
 
